@@ -3,3 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.navbar {
+  background-color: #ffebbb;
+
+  img {
+    width: 70%;
+  }
+
+  .navbar-collapse {
+    justify-content: flex-end;
+    text-align: center;
+  }
+}
