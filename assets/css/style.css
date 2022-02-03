@@ -109,16 +109,47 @@ section.hero a:hover {
   color: #860afb;
 }
 
-#projects h2 {
+#projects {
   text-align: center;
+}
+
+#projects h2 {
   margin-bottom: 20px;
 }
 
 #projects .image-item {
-  background-color: #000000;
   margin-bottom: 15px;
+  position: relative;
 }
 
-#projects img:hover {
-  opacity: 0.4;
+#projects .caption {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #000000bb;
+}
+
+#projects .caption a {
+  color: white;
+  width: 40%;
+  margin: 10px auto;
+  border: 1px solid #ffebbb;
+  padding: 10px 20px;
+}
+
+#projects .image-item:hover .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
