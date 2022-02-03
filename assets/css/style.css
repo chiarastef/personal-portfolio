@@ -10,6 +10,31 @@ body {
   background-color: #faf9ff;
 }
 
+/*Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf9ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffebbb;
+  border-radius: 20%;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffe4a2;
+}
+
+/*Divider between sections */
+.divider {
+  width: 90%;
+  margin: auto;
+}
+
+/*Navbar */
 nav.navbar {
   background-color: #ffebbb;
   position: fixed;
@@ -50,6 +75,7 @@ nav.navbar .navbar-collapse {
   text-align: center;
 }
 
+/*Hero section */
 section.hero {
   height: 100vh;
   padding: 110px 40px 0;
@@ -82,11 +108,7 @@ section.hero a:hover {
   background-color: #ffe4a2;
 }
 
-.divider {
-  width: 90%;
-  margin: auto;
-}
-
+/*About section */
 #about {
   height: 100vh;
   padding: 100px 40px 0;
@@ -94,23 +116,52 @@ section.hero a:hover {
 }
 
 #about p {
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
-#about i:first-of-type {
+#about h2 {
+  margin-bottom: 40px;
+}
+
+#about .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#about .icon span {
+  font-size: 14px;
+}
+
+#about .icon .mobile {
+  color: #303030;
+}
+
+#about .icon .html {
   color: #e54c21;
 }
 
-#about i:nth-of-type(2) {
+#about .icon .css {
   color: #264de4;
 }
 
-#about i:last-of-type {
+#about .icon .bootstrap {
   color: #860afb;
 }
 
+#about .icon:first-of-type {
+  margin-bottom: 20px;
+}
+
+/*Projects section */
 #projects {
   text-align: center;
+  padding-top: 100px;
+  padding-bottom: 80px;
 }
 
 #projects h2 {
@@ -162,4 +213,54 @@ section.hero a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+/*Contact section */
+#contact {
+  height: 100vh;
+  text-align: center;
+  padding-top: 100px;
+}
+
+#contact h2 {
+  margin-bottom: 70px;
+}
+
+#contact .contact-links {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+#contact .contact-links a {
+  text-decoration: none;
+  color: #000000;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact .contact-links i {
+  color: #68645d;
+  margin-right: 10px;
+  padding: 8px 10px;
+  border-radius: 50%;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+#contact .contact-links a:hover i {
+  background-color: #ffebbb;
+}
+
+#contact .contact-links a:hover span {
+  color: #000000c4;
 }

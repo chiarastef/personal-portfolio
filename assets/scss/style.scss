@@ -9,6 +9,31 @@ body {
   background-color: #faf9ff;
 }
 
+/*Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf9ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffebbb;
+  border-radius: 20%;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darken(#ffebbb, 5%);
+}
+
+/*Divider between sections */
+.divider {
+  width: 90%;
+  margin: auto;
+}
+
+/*Navbar */
 nav.navbar {
   background-color: #ffebbb;
   position: fixed;
@@ -43,6 +68,7 @@ nav.navbar {
   }
 }
 
+/*Hero section */
 section.hero {
   height: 100vh;
   padding: 110px 40px 0;
@@ -75,35 +101,55 @@ section.hero {
   }
 }
 
-.divider {
-  width: 90%;
-  margin: auto;
-}
-
+/*About section */
 #about {
   height: 100vh;
   padding: 100px 40px 0;
   text-align: center;
 
   p {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
 
-  i:first-of-type {
-    color: #e54c21;
+  h2 {
+    margin-bottom: 40px;
   }
 
-  i:nth-of-type(2) {
-    color: #264de4;
+  .icon {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-size: 14px;
+    }
+
+    .mobile {
+      color: #303030;
+    }
+
+    .html {
+      color: #e54c21;
+    }
+
+    .css {
+      color: #264de4;
+    }
+
+    .bootstrap {
+      color: #860afb;
+    }
   }
 
-  i:last-of-type {
-    color: #860afb;
+  .icon:first-of-type {
+    margin-bottom: 20px;
   }
 }
 
+/*Projects section */
 #projects {
   text-align: center;
+  padding-top: 100px;
+  padding-bottom: 80px;
 
   h2 {
     margin-bottom: 20px;
@@ -147,5 +193,46 @@ section.hero {
 
   .image-item:hover .caption {
     display: flex;
+  }
+}
+
+/*Contact section */
+#contact {
+  height: 100vh;
+  text-align: center;
+  padding-top: 100px;
+
+  h2 {
+    margin-bottom: 70px;
+  }
+
+  .contact-links {
+    width: fit-content;
+    margin: auto;
+
+    a {
+      text-decoration: none;
+      color: #000000;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    i {
+      color: #68645d;
+      margin-right: 10px;
+      padding: 8px 10px;
+      border-radius: 50%;
+      transition: all 100ms ease-in-out;
+    }
+
+    a:hover i {
+      background-color: #ffebbb;
+    }
+
+    a:hover span {
+      color: #000000c4;
+    }
   }
 }
