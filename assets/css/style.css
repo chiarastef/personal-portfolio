@@ -5,17 +5,120 @@
           box-sizing: border-box;
 }
 
-.navbar {
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #faf9ff;
+}
+
+nav.navbar {
   background-color: #ffebbb;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
-.navbar img {
-  width: 70%;
+nav.navbar .navbar-nav .nav-link {
+  color: #000000bb;
 }
 
-.navbar .navbar-collapse {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+nav.navbar .navbar-nav .nav-link:hover {
+  color: #000000ab;
+}
+
+nav.navbar img {
+  height: 28px;
+}
+
+nav.navbar .nav-item:last-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav.navbar .nav-item:last-of-type i {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+nav.navbar .navbar-collapse {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   text-align: center;
+}
+
+section.hero {
+  height: 100vh;
+  padding: 110px 40px 0;
+  text-align: center;
+}
+
+section.hero h1 {
+  text-align: center;
+  line-height: 1.2;
+  font-size: 35px;
+}
+
+section.hero span {
+  color: #212529bb;
+  font-size: 20px;
+}
+
+section.hero img {
+  display: block;
+  width: 55%;
+  margin: 40px auto;
+}
+
+section.hero a {
+  background-color: #ffebbb;
+  padding: 10px 20px;
+}
+
+section.hero a:hover {
+  background-color: #ffe4a2;
+}
+
+.divider {
+  width: 90%;
+  margin: auto;
+}
+
+#about {
+  height: 100vh;
+  padding: 100px 40px 0;
+  text-align: center;
+}
+
+#about p {
+  margin-bottom: 50px;
+}
+
+#about i:first-of-type {
+  color: #e54c21;
+}
+
+#about i:nth-of-type(2) {
+  color: #264de4;
+}
+
+#about i:last-of-type {
+  color: #860afb;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#projects .image-item {
+  background-color: #000000;
+  margin-bottom: 15px;
+}
+
+#projects img:hover {
+  opacity: 0.4;
 }
