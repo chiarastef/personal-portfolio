@@ -114,6 +114,10 @@ section.hero {
     position: relative;
   }
 
+  img {
+    border-radius: 5px;
+  }
+
   .caption {
     display: none;
     flex-direction: column;
@@ -124,12 +128,18 @@ section.hero {
     height: 100%;
     font-size: 20px;
     color: #ffffff;
-    background-color: #000000bb;
+    background-color: #000000bd;
+    border-radius: 5px;
+
+    span:last-of-type {
+      font-size: 15px;
+    }
 
     a {
       color: white;
+      background-color: #000000a2;
       width: 40%;
-      margin: 10px auto;
+      margin: 5px auto;
       border: 1px solid #ffebbb;
       padding: 10px 20px;
     }
