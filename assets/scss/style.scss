@@ -110,11 +110,14 @@ section#hero {
 
 /*About section */
 section#about {
-  padding: 60px 40px;
+  padding: 50px 20px;
 
   p {
     text-align: center;
     font-size: 15px;
+  }
+
+  p:last-of-type {
     margin-bottom: 50px;
   }
 
@@ -161,7 +164,7 @@ section#projects {
   padding-bottom: 40px;
 
   h2 {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .image-item {
@@ -211,7 +214,7 @@ section#contact {
   padding-bottom: 60px;
 
   h2 {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   .contact-links {
@@ -235,6 +238,10 @@ section#contact {
       transition: all 100ms ease-in-out;
     }
 
+    span {
+      font-size: 15px;
+    }
+
     a:hover i {
       background-color: $primary-color;
     }
@@ -242,6 +249,11 @@ section#contact {
     a:hover span {
       color: #000000c4;
     }
+  }
+
+  img {
+    margin-top: 30px;
+    transform: scaleX(-1);
   }
 }
 
@@ -261,8 +273,9 @@ section#contact {
   }
 
   section#about {
-    .container {
+    .skills {
       width: 60%;
+      margin: auto;
     }
   }
 }
@@ -291,11 +304,7 @@ section#contact {
 
 @media screen and (min-width: 768px) {
   section#about {
-    p {
-      padding: 0 50px;
-    }
-
-    .container {
+    .skills {
       width: 90%;
     }
   }
@@ -311,6 +320,8 @@ section#contact {
 
 @media screen and (min-width: 992px) {
   section#hero {
+    padding-bottom: 50px;
+
     .row {
       margin-top: 50px;
     }
@@ -331,20 +342,58 @@ section#contact {
     }
 
     a {
-      width: 20%;
-      margin-left: 90px;
+      margin: 40px 0 0;
     }
   }
 
   section#about {
-    p {
+    .row:first-of-type {
+      justify-content: space-around;
+    }
+
+    p:first-of-type {
       padding-top: 40px;
+    }
+
+    .skills {
+      width: fit-content;
+      margin: 0;
     }
   }
 
   section#projects {
     .row {
       justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  section#hero {
+    h1 {
+      font-size: 38px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  section#hero {
+    h1 {
+      font-size: 42px;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+  }
+
+  section#about {
+    p {
+      font-size: 17px;
     }
   }
 }

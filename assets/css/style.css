@@ -121,12 +121,15 @@ section#hero a:hover {
 
 /*About section */
 section#about {
-  padding: 60px 40px;
+  padding: 50px 20px;
 }
 
 section#about p {
   text-align: center;
   font-size: 15px;
+}
+
+section#about p:last-of-type {
   margin-bottom: 50px;
 }
 
@@ -180,7 +183,7 @@ section#projects {
 }
 
 section#projects h2 {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 section#projects .image-item {
@@ -237,7 +240,7 @@ section#contact {
 }
 
 section#contact h2 {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 section#contact .contact-links {
@@ -271,12 +274,22 @@ section#contact .contact-links i {
   transition: all 100ms ease-in-out;
 }
 
+section#contact .contact-links span {
+  font-size: 15px;
+}
+
 section#contact .contact-links a:hover i {
   background-color: #ffebbb;
 }
 
 section#contact .contact-links a:hover span {
   color: #000000c4;
+}
+
+section#contact img {
+  margin-top: 30px;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 @media screen and (min-width: 500px) {
@@ -289,8 +302,9 @@ section#contact .contact-links a:hover span {
   section#hero img {
     width: 60%;
   }
-  section#about .container {
+  section#about .skills {
     width: 60%;
+    margin: auto;
   }
 }
 
@@ -312,10 +326,7 @@ section#contact .contact-links a:hover span {
 }
 
 @media screen and (min-width: 768px) {
-  section#about p {
-    padding: 0 50px;
-  }
-  section#about .container {
+  section#about .skills {
     width: 90%;
   }
   section#projects .image-item {
@@ -326,6 +337,9 @@ section#contact .contact-links a:hover span {
 }
 
 @media screen and (min-width: 992px) {
+  section#hero {
+    padding-bottom: 50px;
+  }
   section#hero .row {
     margin-top: 50px;
   }
@@ -342,15 +356,45 @@ section#contact .contact-links a:hover span {
     margin: 0;
   }
   section#hero a {
-    width: 20%;
-    margin-left: 90px;
+    margin: 40px 0 0;
   }
-  section#about p {
+  section#about .row:first-of-type {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  section#about p:first-of-type {
     padding-top: 40px;
+  }
+  section#about .skills {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0;
   }
   section#projects .row {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  section#hero h1 {
+    font-size: 38px;
+  }
+  section#hero h2 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  section#hero h1 {
+    font-size: 42px;
+  }
+  section#hero h2 {
+    font-size: 28px;
+  }
+  section#about p {
+    font-size: 17px;
   }
 }
