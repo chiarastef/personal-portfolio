@@ -10,9 +10,14 @@ body {
   background-color: #faf9ff;
 }
 
+h1,
+h2 {
+  text-align: center;
+}
+
 /*Scrollbar */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -21,11 +26,11 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: #ffebbb;
-  border-radius: 20%;
+  border-radius: 15%;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ffe4a2;
+  background: #ffdf92;
 }
 
 /*Divider between sections */
@@ -64,8 +69,7 @@ nav.navbar .nav-item:last-of-type {
 }
 
 nav.navbar .nav-item:last-of-type i {
-  margin-right: 8px;
-  margin-left: 8px;
+  margin: 0 8px;
 }
 
 nav.navbar .navbar-collapse {
@@ -77,30 +81,37 @@ nav.navbar .navbar-collapse {
 
 /*Hero section */
 section.hero {
-  height: 100vh;
-  padding: 110px 40px 0;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 90px 40px 30px;
 }
 
 section.hero h1 {
-  text-align: center;
-  line-height: 1.2;
-  font-size: 35px;
+  font-size: 28px;
 }
 
-section.hero span {
+section.hero h2 {
   color: #212529bb;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 section.hero img {
   display: block;
-  width: 55%;
-  margin: 40px auto;
+  width: 70%;
+  margin: 55px auto;
 }
 
 section.hero a {
   background-color: #ffebbb;
+  border: 1px solid #ffe4a2;
   padding: 10px 20px;
 }
 
@@ -110,17 +121,17 @@ section.hero a:hover {
 
 /*About section */
 #about {
-  height: 100vh;
-  padding: 100px 40px 0;
-  text-align: center;
+  padding: 60px 40px;
 }
 
 #about p {
-  margin-bottom: 70px;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 50px;
 }
 
 #about h2 {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 #about .icon {
@@ -131,10 +142,14 @@ section.hero a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #about .icon span {
   font-size: 14px;
+  text-align: center;
 }
 
 #about .icon .mobile {
@@ -159,13 +174,12 @@ section.hero a:hover {
 
 /*Projects section */
 #projects {
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 #projects h2 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 #projects .image-item {
@@ -201,7 +215,7 @@ section.hero a:hover {
 }
 
 #projects .caption a {
-  color: white;
+  color: #ffffff;
   background-color: #000000a2;
   width: 40%;
   margin: 5px auto;
@@ -217,13 +231,11 @@ section.hero a:hover {
 
 /*Contact section */
 #contact {
-  height: 100vh;
-  text-align: center;
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 #contact h2 {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 #contact .contact-links {
