@@ -80,7 +80,7 @@ nav.navbar .navbar-collapse {
 }
 
 /*Hero section */
-section.hero {
+section#hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,47 +94,47 @@ section.hero {
   padding: 90px 40px 30px;
 }
 
-section.hero h1 {
+section#hero h1 {
   font-size: 28px;
 }
 
-section.hero h2 {
+section#hero h2 {
   color: #212529bb;
   font-size: 16px;
 }
 
-section.hero img {
+section#hero img {
   display: block;
   width: 70%;
   margin: 55px auto;
 }
 
-section.hero a {
+section#hero a {
   background-color: #ffebbb;
   border: 1px solid #ffe4a2;
   padding: 10px 20px;
 }
 
-section.hero a:hover {
+section#hero a:hover {
   background-color: #ffe4a2;
 }
 
 /*About section */
-#about {
+section#about {
   padding: 60px 40px;
 }
 
-#about p {
+section#about p {
   text-align: center;
   font-size: 15px;
   margin-bottom: 50px;
 }
 
-#about h2 {
-  margin-bottom: 30px;
+section#about h2 {
+  margin-bottom: 40px;
 }
 
-#about .icon {
+section#about .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,52 +147,52 @@ section.hero a:hover {
           align-items: center;
 }
 
-#about .icon span {
+section#about .icon span {
   font-size: 14px;
   text-align: center;
 }
 
-#about .icon .mobile {
+section#about .icon .mobile {
   color: #303030;
 }
 
-#about .icon .html {
+section#about .icon .html {
   color: #e54c21;
 }
 
-#about .icon .css {
+section#about .icon .css {
   color: #264de4;
 }
 
-#about .icon .bootstrap {
+section#about .icon .bootstrap {
   color: #860afb;
 }
 
-#about .icon:first-of-type {
+section#about .icon:first-of-type {
   margin-bottom: 20px;
 }
 
 /*Projects section */
-#projects {
+section#projects {
   text-align: center;
   padding-top: 60px;
   padding-bottom: 40px;
 }
 
-#projects h2 {
+section#projects h2 {
   margin-bottom: 30px;
 }
 
-#projects .image-item {
-  margin-bottom: 15px;
+section#projects .image-item {
+  margin-bottom: 20px;
   position: relative;
 }
 
-#projects img {
+section#projects img {
   border-radius: 5px;
 }
 
-#projects .caption {
+section#projects .caption {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -211,11 +211,11 @@ section.hero a:hover {
   border-radius: 5px;
 }
 
-#projects .caption span:last-of-type {
+section#projects .caption span:last-of-type {
   font-size: 15px;
 }
 
-#projects .caption a {
+section#projects .caption a {
   color: #ffffff;
   background-color: #000000a2;
   width: 40%;
@@ -224,29 +224,30 @@ section.hero a:hover {
   padding: 10px 20px;
 }
 
-#projects .image-item:hover .caption {
+section#projects .image-item:hover .caption {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 /*Contact section */
-#contact {
+section#contact {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-#contact h2 {
+section#contact h2 {
   margin-bottom: 50px;
 }
 
-#contact .contact-links {
+section#contact .contact-links {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
 }
 
-#contact .contact-links a {
+section#contact .contact-links a {
   text-decoration: none;
   color: #000000;
   margin-bottom: 20px;
@@ -261,7 +262,7 @@ section.hero a:hover {
           align-items: center;
 }
 
-#contact .contact-links i {
+section#contact .contact-links i {
   color: #68645d;
   margin-right: 10px;
   padding: 8px 10px;
@@ -270,10 +271,86 @@ section.hero a:hover {
   transition: all 100ms ease-in-out;
 }
 
-#contact .contact-links a:hover i {
+section#contact .contact-links a:hover i {
   background-color: #ffebbb;
 }
 
-#contact .contact-links a:hover span {
+section#contact .contact-links a:hover span {
   color: #000000c4;
+}
+
+@media screen and (min-width: 500px) {
+  section#hero h1 {
+    font-size: 30px;
+  }
+  section#hero h2 {
+    font-size: 18px;
+  }
+  section#hero img {
+    width: 60%;
+  }
+  section#about .container {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  section#hero h1 {
+    font-size: 34px;
+  }
+  section#hero h2 {
+    font-size: 20px;
+  }
+  section#hero img {
+    width: 50%;
+  }
+  section#hero a {
+    display: block;
+    width: 40%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section#about p {
+    padding: 0 50px;
+  }
+  section#about .container {
+    width: 90%;
+  }
+  section#projects .image-item {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  section#hero .row {
+    margin-top: 50px;
+  }
+  section#hero .row div:first-child {
+    padding-top: 50px;
+    padding-left: 100px;
+  }
+  section#hero .row div:first-child h1,
+  section#hero .row div:first-child h2 {
+    text-align: left;
+  }
+  section#hero img {
+    width: 90%;
+    margin: 0;
+  }
+  section#hero a {
+    width: 20%;
+    margin-left: 90px;
+  }
+  section#about p {
+    padding-top: 40px;
+  }
+  section#projects .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }

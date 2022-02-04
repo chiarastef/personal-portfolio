@@ -76,7 +76,7 @@ nav.navbar {
 }
 
 /*Hero section */
-section.hero {
+section#hero {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -109,7 +109,7 @@ section.hero {
 }
 
 /*About section */
-#about {
+section#about {
   padding: 60px 40px;
 
   p {
@@ -119,7 +119,7 @@ section.hero {
   }
 
   h2 {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .icon {
@@ -155,7 +155,7 @@ section.hero {
 }
 
 /*Projects section */
-#projects {
+section#projects {
   text-align: center;
   padding-top: 60px;
   padding-bottom: 40px;
@@ -165,7 +165,7 @@ section.hero {
   }
 
   .image-item {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     position: relative;
   }
 
@@ -206,8 +206,9 @@ section.hero {
 }
 
 /*Contact section */
-#contact {
+section#contact {
   padding-top: 60px;
+  padding-bottom: 60px;
 
   h2 {
     margin-bottom: 50px;
@@ -240,6 +241,110 @@ section.hero {
 
     a:hover span {
       color: #000000c4;
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  section#hero {
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    img {
+      width: 60%;
+    }
+  }
+
+  section#about {
+    .container {
+      width: 60%;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  section#hero {
+    h1 {
+      font-size: 34px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    img {
+      width: 50%;
+    }
+
+    a {
+      display: block;
+      width: 40%;
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section#about {
+    p {
+      padding: 0 50px;
+    }
+
+    .container {
+      width: 90%;
+    }
+  }
+
+  section#projects {
+    .image-item {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  section#hero {
+    .row {
+      margin-top: 50px;
+    }
+
+    .row div:first-child {
+      padding-top: 50px;
+      padding-left: 100px;
+
+      h1,
+      h2 {
+        text-align: left;
+      }
+    }
+
+    img {
+      width: 90%;
+      margin: 0;
+    }
+
+    a {
+      width: 20%;
+      margin-left: 90px;
+    }
+  }
+
+  section#about {
+    p {
+      padding-top: 40px;
+    }
+  }
+
+  section#projects {
+    .row {
+      justify-content: center;
     }
   }
 }
