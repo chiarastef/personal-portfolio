@@ -16,7 +16,7 @@ This is my personal portfolio website. It's the first project from the online fr
 
 ## Screenshots
 
-<img src="personal-portfolio-desktop-preview.png" alt="Personal portfolio desktop preview" width="76%"> <img src="personal-portfolio-mobile-preview.png" alt="Personal portfolio mobile preview" width="21%">
+<img src="screenshots/personal-portfolio-desktop-preview.png" alt="Personal portfolio desktop preview" width="76%"> <img src="screenshots/personal-portfolio-mobile-preview.png" alt="Personal portfolio mobile preview" width="21%">
 
 ## Author
 
