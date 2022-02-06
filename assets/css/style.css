@@ -26,7 +26,7 @@ h2 {
 
 ::-webkit-scrollbar-thumb {
   background: #ffebbb;
-  border-radius: 15%;
+  border-radius: 10%;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -42,8 +42,8 @@ h2 {
 /*Navbar */
 nav.navbar {
   background-color: #ffebbb;
-  position: fixed;
   width: 100%;
+  position: fixed;
   z-index: 1;
 }
 
@@ -99,7 +99,7 @@ section#hero h1 {
 }
 
 section#hero h2 {
-  color: #212529bb;
+  color: #68645d;
   font-size: 16px;
 }
 
@@ -111,22 +111,23 @@ section#hero img {
 
 section#hero a {
   background-color: #ffebbb;
-  border: 1px solid #ffe4a2;
+  border: 1px solid #ffdf92;
   padding: 10px 20px;
 }
 
-section#hero a:hover {
-  background-color: #ffe4a2;
+section#hero a:hover,
+section#hero a:active {
+  background-color: #ffdf92;
 }
 
 /*About section */
 section#about {
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
 section#about p {
-  text-align: center;
   font-size: 15px;
+  text-align: center;
 }
 
 section#about p:last-of-type {
@@ -178,8 +179,7 @@ section#about .icon:first-of-type {
 /*Projects section */
 section#projects {
   text-align: center;
-  padding-top: 60px;
-  padding-bottom: 40px;
+  padding: 60px 0 40px;
 }
 
 section#projects h2 {
@@ -187,8 +187,8 @@ section#projects h2 {
 }
 
 section#projects .image-item {
-  margin-bottom: 20px;
   position: relative;
+  margin-bottom: 20px;
 }
 
 section#projects img {
@@ -208,9 +208,9 @@ section#projects .caption {
   top: 0;
   width: 100%;
   height: 100%;
-  font-size: 20px;
   color: #ffffff;
   background-color: #000000bd;
+  font-size: 20px;
   border-radius: 5px;
 }
 
@@ -219,12 +219,12 @@ section#projects .caption span:last-of-type {
 }
 
 section#projects .caption a {
+  width: 40%;
   color: #ffffff;
   background-color: #000000a2;
-  width: 40%;
-  margin: 5px auto;
   border: 1px solid #ffebbb;
   padding: 10px 20px;
+  margin: 5px auto;
 }
 
 section#projects .image-item:hover .caption {
@@ -251,9 +251,6 @@ section#contact .contact-links {
 }
 
 section#contact .contact-links a {
-  text-decoration: none;
-  color: #000000;
-  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,13 +260,16 @@ section#contact .contact-links a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #000000;
+  text-decoration: none;
+  margin-bottom: 20px;
 }
 
 section#contact .contact-links i {
   color: #68645d;
-  margin-right: 10px;
-  padding: 8px 10px;
   border-radius: 50%;
+  padding: 8px 10px;
+  margin-right: 10px;
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
 }
@@ -303,7 +303,7 @@ section#contact img {
     width: 60%;
   }
   section#about .skills {
-    width: 60%;
+    width: 70%;
     margin: auto;
   }
 }
@@ -320,7 +320,7 @@ section#contact img {
   }
   section#hero a {
     display: block;
-    width: 40%;
+    width: 50%;
     margin: auto;
   }
 }
@@ -364,6 +364,9 @@ section#contact img {
   }
   section#about p:first-of-type {
     padding-top: 40px;
+  }
+  section#about p {
+    text-align: left;
   }
   section#about .skills {
     width: -webkit-fit-content;
