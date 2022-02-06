@@ -21,5 +21,5 @@ This is my personal portfolio website. It's the first project from the online fr
 ## Author
 
 Chiara Stefanelli - Front-End Development Student based in Italy
-- Website - [Chiara Stefanelli](https://vibrant-varahamihira-10fe2d.netlify.app/)
+- Website - [Chiara Stefanelli](https://chiarastef.github.io/personal-portfolio/)
 - LinkedIn - [Chiara Stefanelli](https://www.linkedin.com/in/chiarastefanelli/?locale=en_US)
