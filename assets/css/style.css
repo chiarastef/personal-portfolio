@@ -243,51 +243,31 @@ section#contact h2 {
   margin-bottom: 40px;
 }
 
-section#contact .contact-links {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+section#contact .contact-form {
+  width: 90%;
   margin: auto;
 }
 
-section#contact .contact-links a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #000000;
-  text-decoration: none;
-  margin-bottom: 20px;
-}
-
-section#contact .contact-links i {
-  color: #68645d;
-  border-radius: 50%;
-  padding: 8px 10px;
-  margin-right: 10px;
-  -webkit-transition: all 100ms ease-in-out;
-  transition: all 100ms ease-in-out;
-}
-
-section#contact .contact-links span {
+section#contact .contact-form label,
+section#contact .contact-form input {
   font-size: 15px;
 }
 
-section#contact .contact-links a:hover i {
+section#contact .contact-form button {
+  display: block;
+  width: 100%;
   background-color: #ffebbb;
+  border: 1px solid #ffdf92;
+  padding: 10px 20px;
 }
 
-section#contact .contact-links a:hover span {
-  color: #000000c4;
+section#contact .contact-form button:hover,
+section#contact .contact-form button:active {
+  background-color: #ffdf92;
 }
 
 section#contact img {
-  margin-top: 30px;
+  margin-top: 50px;
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
 }
@@ -334,6 +314,9 @@ section#contact img {
     margin-left: auto;
     margin-right: auto;
   }
+  section#contact .contact-form {
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -379,6 +362,13 @@ section#contact img {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  section#contact .contact-form label,
+  section#contact .contact-form input {
+    font-size: 16px;
+  }
+  section#contact .contact-form button {
+    width: 30%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -398,6 +388,13 @@ section#contact img {
     font-size: 28px;
   }
   section#about p {
+    font-size: 17px;
+  }
+  section#contact .contact-form {
+    width: 70%;
+  }
+  section#contact .contact-form label,
+  section#contact .contact-form input {
     font-size: 17px;
   }
 }

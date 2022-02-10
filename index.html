@@ -31,6 +31,33 @@
       src="https://kit.fontawesome.com/9bdeaf89e7.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_gDmLxsy5P4jHdeFiDEub2");
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            emailjs.sendForm("contact_service", "contact_form", this).then(
+              function () {
+                console.log("SUCCESS!");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -259,32 +286,45 @@
 
     <section id="contact" class="container">
       <div class="row">
-        <div class="col-12 col-lg-7 contact-links">
+        <div class="col-12 col-lg-7">
           <h2>Let's get in contact</h2>
-          <a
-            href="mailto:chiarastefanelli13@gmail.com"
-            aria-label="Send me an email"
-            title="Send me an email"
-          >
-            <i class="fas fa-envelope fa-2x"></i>
-            <span>Send me an email</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/chiarastefanelli/"
-            aria-label="Connect with me on LinkedIn"
-            title="Connect with me on LinkedIn"
-          >
-            <i class="fab fa-linkedin-in fa-2x"></i>
-            <span>Connect with me on LinkedIn</span>
-          </a>
-          <a
-            href="https://github.com/chiarastef"
-            aria-label="Follow me on GitHub"
-            title="Follow me on GitHub"
-          >
-            <i class="fab fa-github fa-2x"></i>
-            <span>Follow me on GitHub</span>
-          </a>
+          <form class="contact-form" id="contact-form">
+            <input type="hidden" name="contact_number" />
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                name="user_name"
+                class="form-control"
+                id="name"
+                aria-describedby="name input"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                name="user_email"
+                class="form-control"
+                id="email"
+                aria-describedby="email input"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                name="message"
+                id="subject"
+                cols="30"
+                rows="8"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
         </div>
         <div class="col-lg-5 d-none d-lg-block">
           <img src="./assets/img/contact-img.svg" alt="" class="img-fluid" />

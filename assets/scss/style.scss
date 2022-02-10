@@ -219,42 +219,31 @@ section#contact {
     margin-bottom: 40px;
   }
 
-  .contact-links {
-    width: fit-content;
+  .contact-form {
+    width: 90%;
     margin: auto;
 
-    a {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      color: #000000;
-      text-decoration: none;
-      margin-bottom: 20px;
-    }
-
-    i {
-      color: $secondary-color;
-      border-radius: 50%;
-      padding: 8px 10px;
-      margin-right: 10px;
-      transition: all 100ms ease-in-out;
-    }
-
-    span {
+    label,
+    input {
       font-size: 15px;
     }
 
-    a:hover i {
+    button {
+      display: block;
+      width: 100%;
       background-color: $primary-color;
+      border: 1px solid $darker-primary-color;
+      padding: 10px 20px;
     }
 
-    a:hover span {
-      color: #000000c4;
+    button:hover,
+    button:active {
+      background-color: $darker-primary-color;
     }
   }
 
   img {
-    margin-top: 30px;
+    margin-top: 50px;
     transform: scaleX(-1);
   }
 }
@@ -318,6 +307,12 @@ section#contact {
       margin-right: auto;
     }
   }
+
+  section#contact {
+    .contact-form {
+      width: 80%;
+    }
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -372,6 +367,19 @@ section#contact {
       justify-content: center;
     }
   }
+
+  section#contact {
+    .contact-form {
+      label,
+      input {
+        font-size: 16px;
+      }
+
+      button {
+        width: 30%;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -400,6 +408,17 @@ section#contact {
   section#about {
     p {
       font-size: 17px;
+    }
+  }
+
+  section#contact {
+    .contact-form {
+      width: 70%;
+
+      label,
+      input {
+        font-size: 17px;
+      }
     }
   }
 }
