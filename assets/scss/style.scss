@@ -1,7 +1,10 @@
+$font-color: #212529;
+$background-color: #faf9ff;
 $primary-color: #ffebbb;
 $darker-primary-color: darken($primary-color, 8%);
 $secondary-color: #68645d;
-$background-color: #faf9ff;
+$links-transition: background-color 300ms ease-in-out;
+$links-borders: 1px solid $darker-primary-color;
 
 * {
   margin: 0;
@@ -15,8 +18,21 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   text-align: center;
+}
+
+.btn {
+  background-color: $primary-color;
+  border: $links-borders;
+  padding: 10px 20px;
+  transition: $links-transition;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: $darker-primary-color;
 }
 
 /*Scrollbar */
@@ -51,23 +67,33 @@ nav.navbar {
   z-index: 1;
 
   .navbar-nav .nav-link {
-    color: #000000bb;
+    color: lighten($font-color, 15%);
   }
 
   .navbar-nav .nav-link:hover {
-    color: #000000ab;
+    color: lighten($font-color, 25%);
   }
 
-  img {
+  .chiara-logo {
     height: 28px;
   }
 
-  .nav-item:last-of-type {
+  .nav-contact-links {
     display: flex;
     justify-content: center;
 
-    i {
+    a {
       margin: 0 8px;
+    }
+
+    img {
+      width: 16px;
+      filter: grayscale(85%);
+      transition: filter 3000ms ease-in-out;
+    }
+
+    a:hover img {
+      filter: grayscale(100%);
     }
   }
 
@@ -93,21 +119,33 @@ section#hero {
     font-size: 16px;
   }
 
-  img {
+  .hero-contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero-contact-link {
+      background-color: $primary-color;
+      border: $links-borders;
+      border-radius: 50%;
+      padding: 6px 10px;
+      margin: 8px;
+      transition: $links-transition;
+    }
+
+    .hero-contact-link:hover {
+      background-color: $darker-primary-color;
+    }
+
+    img {
+      width: 16px;
+    }
+  }
+
+  .chiara-img {
     display: block;
     width: 70%;
-    margin: 55px auto;
-  }
-
-  a {
-    background-color: $primary-color;
-    border: 1px solid $darker-primary-color;
-    padding: 10px 20px;
-  }
-
-  a:hover,
-  a:active {
-    background-color: $darker-primary-color;
+    margin: 40px auto;
   }
 }
 
@@ -115,17 +153,25 @@ section#hero {
 section#about {
   padding: 60px 20px;
 
-  p {
-    font-size: 15px;
-    text-align: center;
-  }
-
-  p:last-of-type {
-    margin-bottom: 50px;
-  }
-
   h2 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    margin-bottom: 25px;
+  }
+
+  .about-text {
+    text-align: center;
+    margin-bottom: 50px;
+
+    p {
+      font-size: 15px;
+    }
+
+    a {
+      margin-top: 15px;
+    }
   }
 
   .icon {
@@ -133,13 +179,30 @@ section#about {
     flex-direction: column;
     align-items: center;
 
+    .icon-img,
+    .icon-img-bootstrap {
+      background-color: $primary-color;
+      border: $links-borders;
+      border-radius: 50%;
+      transition: $links-transition;
+    }
+
+    .icon-img {
+      padding: 14px 21px 10px;
+    }
+
+    .icon-img-bootstrap {
+      padding: 13px 13px 11px;
+    }
+
     span {
       font-size: 14px;
       text-align: center;
+      margin-top: 4px;
     }
 
-    .mobile {
-      color: #303030;
+    .figma {
+      height: 48px;
     }
 
     .html {
@@ -158,6 +221,11 @@ section#about {
   .icon:first-of-type {
     margin-bottom: 20px;
   }
+
+  .icon:hover .icon-img,
+  .icon:hover .icon-img-bootstrap {
+    background-color: $darker-primary-color;
+  }
 }
 
 /*Projects section */
@@ -171,7 +239,7 @@ section#projects {
 
   .image-item {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   img {
@@ -179,7 +247,7 @@ section#projects {
   }
 
   .caption {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     position: absolute;
@@ -187,41 +255,57 @@ section#projects {
     width: 100%;
     height: 100%;
     color: #ffffff;
-    background-color: #000000bd;
+    background-color: #000000cb;
     font-size: 20px;
     border-radius: 5px;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
 
     span:last-of-type {
+      margin-top: 4px;
       font-size: 15px;
     }
 
+    .launch-buttons {
+      margin-top: 10px;
+    }
+
     a {
-      width: 40%;
+      width: 140px;
       color: #ffffff;
-      background-color: #000000a2;
-      border: 1px solid $primary-color;
+      background-color: #000000a6;
+      border: $links-borders;
       padding: 10px 20px;
       margin: 5px auto;
     }
   }
 
   .image-item:hover .caption {
-    display: flex;
+    opacity: 1;
   }
 }
 
 /*Contact section */
 section#contact {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
 
   h2 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+  }
+
+  .row {
+    flex-direction: column-reverse;
   }
 
   .contact-form {
     width: 90%;
-    margin: auto;
+    margin: 50px auto 0;
+
+    h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
 
     label,
     input {
@@ -231,18 +315,43 @@ section#contact {
     button {
       display: block;
       width: 100%;
-      background-color: $primary-color;
-      border: 1px solid $darker-primary-color;
-      padding: 10px 20px;
+    }
+  }
+
+  .contact-contact-links {
+    width: fit-content;
+    margin: auto;
+
+    .contact-contact-link {
+      display: flex;
+      align-items: center;
+      margin-top: 12px;
+      color: inherit;
+      text-decoration: none;
+
+      .contact-link-icon {
+        background-color: $primary-color;
+        border: $links-borders;
+        padding: 6px 8px;
+        border-radius: 50%;
+        transition: $links-transition;
+      }
+
+      img {
+        width: 32px;
+      }
+
+      span {
+        margin-left: 5px;
+      }
     }
 
-    button:hover,
-    button:active {
+    .contact-contact-link:hover .contact-link-icon {
       background-color: $darker-primary-color;
     }
   }
 
-  img {
+  .contact-img {
     margin-top: 50px;
     transform: scaleX(-1);
   }
@@ -269,6 +378,14 @@ section#contact {
       margin: auto;
     }
   }
+
+  section#projects {
+    .caption {
+      a {
+        width: 160px;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -281,11 +398,11 @@ section#contact {
       font-size: 20px;
     }
 
-    img {
+    .chiara-img {
       width: 50%;
     }
 
-    a {
+    .btn {
       display: block;
       width: 50%;
       margin: auto;
@@ -294,7 +411,23 @@ section#contact {
 }
 
 @media screen and (min-width: 768px) {
+  section#hero {
+    .hero-contact-link {
+      .hero-contact-link {
+        padding: 11px 14px;
+      }
+
+      img {
+        width: 23px;
+      }
+    }
+  }
+
   section#about {
+    .about-text {
+      padding: 0 50px;
+    }
+
     .skills {
       width: 90%;
     }
@@ -317,48 +450,69 @@ section#contact {
 
 @media screen and (min-width: 992px) {
   section#hero {
-    padding-bottom: 50px;
+    padding-top: 110px;
+    padding-bottom: 120px;
 
     .row {
       margin-top: 50px;
     }
 
-    .row div:first-child {
+    .row .hero-title {
       padding-top: 50px;
       padding-left: 100px;
 
       h1,
-      h2 {
+      h2,
+      .hero-contact-links {
         text-align: left;
+      }
+
+      .hero-contact-links {
+        justify-content: start;
+        margin-top: 20px;
+
+        .hero-contact-link:first-of-type {
+          margin-left: 0;
+        }
+
+        img {
+          width: 24px;
+        }
       }
     }
 
-    img {
+    .chiara-img {
       width: 90%;
       margin: 0;
     }
 
-    a {
+    .btn {
       margin: 40px 0 0;
     }
   }
 
   section#about {
+    h2 {
+      margin-bottom: 35px;
+    }
+
     .row:first-of-type {
-      justify-content: space-around;
+      justify-content: space-between;
     }
 
-    p:first-of-type {
-      padding-top: 40px;
-    }
-
-    p {
+    .about-text {
       text-align: left;
+      padding: 0;
+      padding: 0 40px;
     }
 
     .skills {
-      width: fit-content;
+      width: 33.33333333%;
       margin: 0;
+
+      h3 {
+        font-size: 25px;
+      }
     }
   }
 
@@ -369,7 +523,17 @@ section#contact {
   }
 
   section#contact {
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .row {
+      flex-direction: row;
+    }
+
     .contact-form {
+      margin-top: 0;
+
       label,
       input {
         font-size: 16px;
