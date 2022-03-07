@@ -4,7 +4,7 @@ This is my personal portfolio website. It's the first project from the online fr
 
 ## Link
 
-- [Website url](https://chiarastef.github.io/personal-portfolio/)
+- [Website url](https://chiarastefanelli.netlify.app/) (hosted on Netlify).
 
 ## Built with
 
