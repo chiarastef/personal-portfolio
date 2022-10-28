@@ -82,6 +82,12 @@
             emailjs.sendForm("contact_service", "contact_form", this).then(
               function () {
                 console.log("SUCCESS!");
+                const inputs = document.querySelectorAll(
+                  "#name, #email, #message"
+                );
+                inputs.forEach((input) => {
+                  input.value = "";
+                });
               },
               function (error) {
                 console.log("FAILED...", error);
@@ -451,11 +457,11 @@
               />
             </div>
             <div class="mb-3">
-              <label for="subject" class="form-label">Message</label>
+              <label for="message" class="form-label">Message</label>
               <textarea
                 class="form-control"
                 name="message"
-                id="subject"
+                id="message"
                 cols="30"
                 rows="8"
                 required
