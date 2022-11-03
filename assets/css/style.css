@@ -370,7 +370,8 @@ section#contact .email-sent {
 }
 
 section#contact .email-sent button {
-  margin-top: 10px;
+  display: block;
+  margin: 10px auto 0;
 }
 
 section#contact .contact-form {
