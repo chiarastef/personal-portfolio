@@ -145,10 +145,20 @@ section#hero .hero-contact-links {
 }
 
 section#hero .hero-contact-links .hero-contact-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
   background-color: #ffebbb;
   border: 1px solid #ffdf92;
   border-radius: 50%;
-  padding: 6px 10px;
   margin: 8px;
   -webkit-transition: background-color 300ms ease-in-out;
   transition: background-color 300ms ease-in-out;
@@ -194,6 +204,12 @@ section#about .about-text a {
   margin-top: 15px;
 }
 
+section#about .skill-icons {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 section#about .icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -205,23 +221,26 @@ section#about .icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 20px;
 }
 
-section#about .icon .icon-img,
-section#about .icon .icon-img-bootstrap {
+section#about .icon .icon-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 75px;
+  height: 75px;
   background-color: #ffebbb;
   border: 1px solid #ffdf92;
   border-radius: 50%;
   -webkit-transition: background-color 300ms ease-in-out;
   transition: background-color 300ms ease-in-out;
-}
-
-section#about .icon .icon-img {
-  padding: 14px 21px 10px;
-}
-
-section#about .icon .icon-img-bootstrap {
-  padding: 13px 13px 11px;
 }
 
 section#about .icon span {
@@ -242,16 +261,19 @@ section#about .icon .css {
   color: #264de4;
 }
 
+section#about .icon .js {
+  color: #ffd600;
+}
+
 section#about .icon .bootstrap {
   color: #860afb;
 }
 
-section#about .icon:first-of-type {
-  margin-bottom: 20px;
+section#about .icon:last-of-type {
+  margin-bottom: 0;
 }
 
-section#about .icon:hover .icon-img,
-section#about .icon:hover .icon-img-bootstrap {
+section#about .icon:hover .icon-img {
   background-color: #ffdf92;
 }
 
@@ -268,6 +290,9 @@ section#projects h2 {
 section#projects .image-item {
   position: relative;
   margin-bottom: 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 3px 20px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 3px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 section#projects img {
@@ -357,14 +382,14 @@ section#contact .contact-form button {
   width: 100%;
 }
 
-section#contact .contact-contact-links {
+section#contact .contact-links {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
 }
 
-section#contact .contact-contact-links .contact-contact-link {
+section#contact .contact-links .contact-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,24 +401,34 @@ section#contact .contact-contact-links .contact-contact-link {
   text-decoration: none;
 }
 
-section#contact .contact-contact-links .contact-contact-link .contact-link-icon {
+section#contact .contact-links .contact-link .contact-link-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45px;
+  height: 45px;
   background-color: #ffebbb;
   border: 1px solid #ffdf92;
-  padding: 6px 8px;
   border-radius: 50%;
   -webkit-transition: background-color 300ms ease-in-out;
   transition: background-color 300ms ease-in-out;
 }
 
-section#contact .contact-contact-links .contact-contact-link img {
-  width: 32px;
+section#contact .contact-links .contact-link img {
+  width: 25px;
 }
 
-section#contact .contact-contact-links .contact-contact-link span {
-  margin-left: 5px;
+section#contact .contact-links .contact-link span {
+  margin-left: 8px;
 }
 
-section#contact .contact-contact-links .contact-contact-link:hover .contact-link-icon {
+section#contact .contact-links .contact-link:hover .contact-link-icon {
   background-color: #ffdf92;
 }
 
@@ -410,8 +445,8 @@ section#contact .contact-img {
   section#hero h2 {
     font-size: 18px;
   }
-  section#hero img {
-    width: 60%;
+  section#hero .hero-contact-links img {
+    width: 18px;
   }
   section#about .skills {
     width: 70%;
@@ -440,11 +475,12 @@ section#contact .contact-img {
 }
 
 @media screen and (min-width: 768px) {
-  section#hero .hero-contact-link .hero-contact-link {
-    padding: 11px 14px;
+  section#hero .hero-contact-links .hero-contact-link {
+    width: 45px;
+    height: 45px;
   }
-  section#hero .hero-contact-link img {
-    width: 23px;
+  section#hero .hero-contact-links img {
+    width: 22px;
   }
   section#about .about-text {
     padding: 0 50px;
@@ -500,11 +536,6 @@ section#contact .contact-img {
   }
   section#about h2 {
     margin-bottom: 35px;
-  }
-  section#about .row:first-of-type {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
   section#about .about-text {
     text-align: left;
