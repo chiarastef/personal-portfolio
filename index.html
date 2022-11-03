@@ -82,12 +82,7 @@
             emailjs.sendForm("contact_service", "contact_form", this).then(
               function () {
                 console.log("SUCCESS!");
-                const inputs = document.querySelectorAll(
-                  "#name, #email, #message"
-                );
-                inputs.forEach((input) => {
-                  input.value = "";
-                });
+                hideEmailForm();
               },
               function (error) {
                 console.log("FAILED...", error);
@@ -507,6 +502,11 @@
       <h2>Let's get in contact</h2>
       <div class="row">
         <div class="col-12 col-lg-7">
+          <div id="email-sent" class="email-sent">
+            Email sent!<br />
+            I'll get back to you as soon as possible.
+            <button class="btn" id="new-email">Send another email</button>
+          </div>
           <form class="contact-form" id="contact-form">
             <h3 class="d-block d-lg-none">Or send me an email</h3>
             <input type="hidden" name="contact_number" />
