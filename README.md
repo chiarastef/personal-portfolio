@@ -2,10 +2,6 @@
 
 This is my personal portfolio website. It's the first project from the online front-end development course on [Start2Impact](https://www.start2impact.it/).
 
-## Link
-
-- [Website url](https://chiarastefanelli.netlify.app/) (hosted on Netlify).
-
 ## Screenshots
 
 <img src="screenshots/personal-portfolio-desktop-preview.png" alt="Personal portfolio desktop preview" width="78%"> <img src="screenshots/personal-portfolio-mobile-preview.png" alt="Personal portfolio mobile preview" width="19%">
